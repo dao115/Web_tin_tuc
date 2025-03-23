@@ -18,14 +18,11 @@ try {
     // bắt đầu định nghĩa ra các đường dẫn
     $router->get('/', [App\Controllers\HomeController::class, 'index']);  // Trang chủ
     $router->get('login', [App\Controllers\AuthController::class, 'index']);
-
     $router->post('login_post', [App\Controllers\AuthController::class, 'login_post']);
-    // $router->post('login_post', function (){
-    //     echo '111';
-    // });
+    $router->get('register', [App\Controllers\AuthController::class, 'register']);
+    $router->post('register_post', [App\Controllers\AuthController::class, 'register_post']);
 
-
-    //định nghĩa đường dẫn trỏ đến user Controller
+    // định nghĩa đường dẫn trỏ đến user Controller
     $router->get('list-user', [App\Controllers\UserController::class, 'index']);
     $router->get('add-user', [App\Controllers\UserController::class, 'adduser']);
     $router->post('post-user', [App\Controllers\UserController::class, 'postuser']);
@@ -48,11 +45,8 @@ try {
     $router->get('add-time',[App\Controllers\TimeController::class,'add']);
     $router->post('store-time',[App\Controllers\TimeController::class,'store']);
 
-
-
     // khu vực cần quan tâm -----------
-    //$router->get('test', [App\Controllers\userController::class, 'index']);
-
+    
     # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
     $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
 
@@ -64,6 +58,5 @@ try {
     var_dump($e->getMessage());
     die;
 }
-
 
 ?>
