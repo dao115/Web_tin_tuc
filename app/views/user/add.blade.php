@@ -21,11 +21,11 @@
 
     <form action="{{ route('post-user') }}" method="post">
         <div class="form-group mb-3">
-            <label for="">Tên giảng viên</label>
+            <label for=""></label>
             <input type="text" name="name" id="ten" class="form-control" placeholder="nhập tên giảng viên" >
         </div>
         <div class="form-group mb-3">
-            <label for="">SĐT</label>
+            <label for=""></label>
             <input type="text" name="phone" id="gia" class="form-control" placeholder="nhập SĐT giảng viên" >
         </div>
         <button type="submit" name="gui" class="btn btn-primary">Gửi</button>

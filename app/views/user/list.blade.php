@@ -8,10 +8,10 @@
 
     <table class="table table-striped table-hover">
         <thead>
-            <th>ID</th>
-            <th>Tên giảng viên</th>
-            <th>SĐT</th>
-            <th>Thao tác</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
         </thead>
         <tbody>
             @foreach ($users as $user )
