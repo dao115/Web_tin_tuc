@@ -14,7 +14,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card shadow p-4">
                     <div class="text-center mb-4">
-                        <img src="https://tse2.mm.bing.net/th?id=OIP.wSpP6-E35RzeH9qJGjVsagHaHa&pid=Api" alt="IMG" class="img-fluid" style="max-width: 100px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21601.png" alt="IMG" class="img-fluid" style="max-width: 100px;">
                     </div>
                     <form method="POST" action="{{BASE_URL}}login_post">
                         <h4 class="text-center mb-3">Đăng Nhập</h4>
