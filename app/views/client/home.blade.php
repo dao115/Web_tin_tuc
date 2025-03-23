@@ -97,7 +97,7 @@
                 </ul>
                 <div class="ms-3">
                     <a href="#" class="btn btn-outline-light">Đăng ký</a>
-                    <a href="#" class="btn btn-outline-warning">Đăng nhập</a>
+                    <a href="{{ BASE_URL }}login" class="btn btn-outline-warning">Đăng nhập</a>
                 </div>
             </div>
         </div>

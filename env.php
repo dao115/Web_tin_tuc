@@ -4,7 +4,7 @@ const DBCHARSET = "utf8";
 const DBUSER = "root";
 const DBPASS = "";
 const DBHOST = "localhost";
-const BASE_URL = "http://localhost/ASS2/";
+const BASE_URL = "http://localhost/Web_tin_tuc/";
 function route($url)
 {
     return BASE_URL . $url;
