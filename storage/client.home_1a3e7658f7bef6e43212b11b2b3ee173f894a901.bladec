@@ -8,15 +8,16 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <style>
  body {
- background-color: #f4f6f9;
+ background-color: #f8f9fa;
  font-family: 'Arial', sans-serif;
+ color: #343a40;
  }
  .navbar {
- background-color: #004085 !important;
+ background: linear-gradient(135deg,rgb(49, 70, 92), #6610f2);
  padding: 15px;
  }
  .navbar-brand img {
- width: 150px;
+ width: 120px;
  height: auto;
  }
  .navbar-nav .nav-item .nav-link {
@@ -28,18 +29,32 @@
  color: #f8d210 !important;
  }
  .card {
- border-radius: 10px;
+ border-radius: 15px;
  overflow: hidden;
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
  transition: transform 0.3s ease-in-out;
+ background: #ffffff;
  }
  .card:hover {
  transform: scale(1.05);
  }
+ .card-title {
+ color: #007bff;
+ font-weight: bold;
+ }
+ .btn-primary {
+ background: linear-gradient(135deg, #007bff, #6610f2);
+ border: none;
+ }
  footer {
- background: #333;
+ background: #343a40;
  color: white;
  padding: 20px 0;
+ }
+ .featured-news {
+ background-color: #e3f2fd;
+ padding: 20px;
+ border-radius: 10px;
  }
  </style>
 </head>
@@ -62,41 +77,46 @@
  </ul>
  <div class="ms-3">
  <a href="#" class="btn btn-outline-light">Đăng ký</a>
- <a href="<?php echo \htmlentities(BASE_URL??'', ENT_QUOTES, 'UTF-8', false); ?>login" class="btn btn-outline-warning">Đăng nhập</a>
+ <a href="#" class="btn btn-outline-warning">Đăng nhập</a>
  </div>
  </div>
  </div>
  </nav>
-
+ <div class="container mt-4">
+ <div class="featured-news mb-4">
+ <h2 class="text-primary">Tin Nổi Bật</h2>
+ <p><strong>Bài viết mới nhất về công nghệ AI</strong></p>
+ <a href="#" class="btn btn-primary">Đọc ngay</a>
+ </div>
  <div class="container mt-5">
- <h2 class="mb-4 text-primary text-center">Sản phẩm mới</h2>
+ <h2 class="mb-4 text-primary text-center">Tin Nổi Bật</h2>
  <div class="row">
  <div class="col-md-4">
  <div class="card">
- <img src="https://source.unsplash.com/400x250/?laptop" class="card-img-top" alt="Sản phẩm 1">
+ <img src="https://source.unsplash.com/400x250/?news" class="card-img-top" alt="Tin 1">
  <div class="card-body">
- <h5 class="card-title">Laptop cao cấp</h5>
- <p class="card-text">Laptop mới với hiệu năng mạnh mẽ, phù hợp cho công việc và giải trí.</p>
+ <h5 class="card-title">Bản Tin Mới Nhất</h5>
+ <p class="card-text">Cập nhật những thông tin nóng hổi trong ngày.</p>
  <a href="#" class="btn btn-primary">Xem chi tiết</a>
  </div>
  </div>
  </div>
  <div class="col-md-4">
  <div class="card">
- <img src="https://source.unsplash.com/400x250/?smartphone" class="card-img-top" alt="Sản phẩm 2">
+ <img src="https://source.unsplash.com/400x250/?technology" class="card-img-top" alt="Tin 2">
  <div class="card-body">
- <h5 class="card-title">Smartphone thế hệ mới</h5>
- <p class="card-text">Điện thoại thông minh với camera sắc nét và hiệu suất vượt trội.</p>
+ <h5 class="card-title">Công Nghệ Mới</h5>
+ <p class="card-text">Những cải tiến công nghệ mới nhất bạn không thể bỏ lỡ.</p>
  <a href="#" class="btn btn-primary">Xem chi tiết</a>
  </div>
  </div>
  </div>
  <div class="col-md-4">
  <div class="card">
- <img src="https://source.unsplash.com/400x250/?headphones" class="card-img-top" alt="Sản phẩm 3">
+ <img src="https://source.unsplash.com/400x250/?entertainment" class="card-img-top" alt="Tin 3">
  <div class="card-body">
- <h5 class="card-title">Tai nghe không dây</h5>
- <p class="card-text">Chất lượng âm thanh đỉnh cao, kết nối ổn định và thời gian sử dụng lâu dài.</p>
+ <h5 class="card-title">Giải Trí Hôm Nay</h5>
+ <p class="card-text">Những tin tức giải trí hấp dẫn nhất trong ngày.</p>
  <a href="#" class="btn btn-primary">Xem chi tiết</a>
  </div>
  </div>
