@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Thêm Font Awesome để sử dụng icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>@yield('title', 'Admin Dashboard')</title>
+    <title>@yield('title', 'Trang Tin Tức')</title>
     <style>
-        /* Định dạng sidebar */
         .sidebar {
             min-height: 100vh;
             background-color: #343a40;
@@ -26,7 +24,6 @@
             background-color: #495057;
             font-weight: bold;
         }
-        /* Định dạng phần login và header */
         .header-right {
             display: flex;
             align-items: center;
@@ -47,73 +44,41 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
             <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">
-                <h4 class="text-center py-2">Admin Menu</h4>
+                <h4 class="text-center py-2">Danh Mục</h4>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active-link" href="{{ BASE_URL }}">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ BASE_URL }}list-user">Quản lý giảng viên</a>
+                        <a class="nav-link" href="{{ BASE_URL }}news">Tin mới</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ BASE_URL }}add-user">Thêm giảng viên</a>
+                        <a class="nav-link" href="{{ BASE_URL }}category">Danh mục</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ BASE_URL }}list-course">Quản lý khóa học</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ BASE_URL }}list-category">Quản lý danh mục</a>
+                        <a class="nav-link" href="{{ BASE_URL }}about">Giới thiệu</a>
                     </li>
                 </ul>
             </nav>
-
-            <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <!-- Header -->
                 <header class="d-flex justify-content-between align-items-center py-3 mb-3 border-bottom">
-                    <h1 class="h2">Admin Dashboard</h1>
-
-                    <!-- Phần Login/Thông tin người dùng -->
+                    <h1 class="h2">Trang Tin Tức</h1>
                     <div class="header-right">
-                        @if(isset($_SESSION['auth']) && !empty($_SESSION['auth']))
-                            <!-- Nếu đã đăng nhập -->
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{ $_SESSION['auth']['username'] }}
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="{{ BASE_URL }}">Đăng xuất</a></li>
-                                </ul>
-                            </div>
-                        @else
-                            <!-- Nếu chưa đăng nhập -->
-                            <a href="{{ BASE_URL }}" class="btn btn-primary">
-                                <i class="fas fa-sign-in-alt"></i> Đăng xuất
-                            </a>
-                        @endif
-
-                        <!-- Thêm icon thông báo -->
                         <div class="icon">
                             <i class="fas fa-bell"></i>
                         </div>
                     </div>
                 </header>
-
-                <!-- Nội dung chính -->
                 <div class="content">
-                    @yield('content') <!-- Nội dung trang sẽ được load ở đây -->
+                    @yield('content')
                 </div>
-
-
                 <footer class="text-center py-3">
-                    <span>FPT POLYTECHNIC</span>
+                    <span>Tin Tức 24h</span>
                 </footer>
             </main>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
 </body>
 </html>
